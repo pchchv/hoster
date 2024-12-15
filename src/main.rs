@@ -10,3 +10,7 @@ fn main() {
 fn actual() -> i32 {
     1
 }
+
+fn server() -> Result<(), Error> {
+    Ok(())
+}
