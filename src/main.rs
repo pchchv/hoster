@@ -2,11 +2,6 @@ use libc::exit;
 
 pub struct Error(pub String);
 
-fn main() {
-    let result = actual();
-    unsafe { exit(result) }
-}
-
 fn actual() -> i32 {
     if let Err(err) = server() {
         eprintln!("{}", err.0);
@@ -18,4 +13,9 @@ fn actual() -> i32 {
 
 fn server() -> Result<(), Error> {
     Ok(())
+}
+
+fn main() {
+    let result = actual();
+    unsafe { exit(result) }
 }
