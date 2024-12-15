@@ -1,5 +1,7 @@
 use libc::exit;
 
+mod options;
+
 pub struct Error(pub String);
 
 fn actual() -> i32 {
