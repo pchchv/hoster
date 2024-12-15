@@ -14,3 +14,14 @@ pub enum LogLevel {
     /// No auth data
     NoAuth,
 }
+
+impl From<u64> for LogLevel {
+    fn from(raw: u64) -> LogLevel {
+        match raw {
+            0 => LogLevel::All,
+            1 => LogLevel::NoServeStatus,
+            2 => LogLevel::NoStartup,
+            _ => LogLevel::NoAuth,
+        }
+    }
+}
