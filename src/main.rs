@@ -1,7 +1,9 @@
 use libc::exit;
 
-pub mod ops;
+
 mod options;
+pub mod ops;
+pub mod util;
 
 pub struct Error(pub String);
 
