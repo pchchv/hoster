@@ -8,7 +8,12 @@ fn main() {
 }
 
 fn actual() -> i32 {
-    1
+    if let Err(err) = server() {
+        eprintln!("{}", err.0);
+        1
+    } else {
+        0
+    }
 }
 
 fn server() -> Result<(), Error> {
