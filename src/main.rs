@@ -1,5 +1,6 @@
 use libc::exit;
 
+pub struct Error(pub String);
 
 fn main() {
     let result = actual();
